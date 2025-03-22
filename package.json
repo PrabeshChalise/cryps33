@@ -1,18 +1,33 @@
 {
-  "name": "front",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "@popperjs/core": "^2.11.8",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.8.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "axios": "^1.7.2",
+    "bootstrap": "^4.6.2",
+    "chart.js": "^4.4.3",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "ethers": "^6.13.4",
+    "html2canvas": "^1.4.1",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.2",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.23.1",
+    "react-scripts": "^5.0.1",
+    "react-sparklines": "^1.7.0",
+    "react-tradingview-embed": "^3.0.6",
+    "react-typed": "^2.0.12",
+    "recharts": "^2.12.7",
+    "socket.io-client": "^4.8.1",
+    "web-vitals": "^2.1.4",
+    "web3": "^4.16.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,10 +52,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.0.11"
   }
 }
