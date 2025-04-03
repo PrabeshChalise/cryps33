@@ -55,6 +55,13 @@ import TradePage from "./Components/TradePage"; // Trade Page
 import PlanPage from "./Components/PlanPage"; // Trade Page
 import FeaturePage from "./Components/FeaturePage"; // Trade Page
 import WalletDashboard from "./Components/WalletDashboard";
+import TradingDashboard from "./Components/TradingDashboard";
+import CryptoNews from "./Components/CryptoNews";
+import PredictionDetails from "./Components/PredictionDetails";
+import PredictionSummary from "./Components/PredictionSummary";
+import Result from "./Components/Result";
+import Transactions from "./Components/Transactions";
+import TransactionDetails from "./Components/TransactionDetails";
 const AppContent = () => {
   const [open, setOpen] = useState(false);
   const [opensign, setOpensign] = useState(false);
@@ -83,6 +90,7 @@ const AppContent = () => {
     "/agentSignup",
     "/admin/signup",
     "/admin/login",
+    "/",
   ]; // Add paths that should bypass wallet connection
 
   const walletProviders = {
@@ -208,6 +216,17 @@ const AppContent = () => {
           <Route path="/tradeControl" element={<AdminTradeControl />} />
           <Route path="/viewRequests" element={<AdminDepositApproval />} />
           <Route path="/viewSend" element={<AdminSendApproval />} />
+          <Route path="/tradingPage" element={<TradingDashboard />} />
+          <Route
+            exact
+            path="/prediction/:predictionId"
+            element={<PredictionDetails />}
+          />
+          <Route exact path="/transaction" element={<Transactions />} />
+          <Route
+            path="/transaction/:transactionId"
+            element={<TransactionDetails />}
+          />{" "}
           {/* <Route path="/settings" element={<Settings />} /> */}
           {/* <Route path="/terms" element={<Terms />} /> */}
           {/* <Route path="/transaction" element={<Transactions />} /> */}
@@ -232,10 +251,12 @@ const AppContent = () => {
               </PrivateRouteMasterAdmin>
             }
           />
+          <Route path="/result" element={<Result />} />
           <Route path="/masteradminlogin" element={<MasterAdminLogin />} />
           <Route path="/masteradminsignup" element={<MasterAdminSignup />} />
           <Route path="/admin/signup" element={<AdminSignup />} />
           <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/cryptonews" element={<CryptoNews />} />
           <Route
             path="/admin/agent/approval"
             element={<AdminAgentApproval />}
